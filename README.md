@@ -94,3 +94,4 @@ components/     reusable UI (Navbar, Footer, BookingForm, GalleryGrid, …)
 lib/            all editable content and business details
 public/images/  your photos
 ```
+.
