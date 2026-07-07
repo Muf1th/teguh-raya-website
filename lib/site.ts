@@ -23,9 +23,9 @@ export const site = {
   mapEmbed:
     "https://www.google.com/maps?q=Kampung+Serambangun,+Tutong,+Brunei&output=embed",
   hours: [
-    { days: "Monday – Saturday", time: "8:00 AM – 5:30 PM" },
-    { days: "Friday", time: "8:00 – 11:30 AM, 2:30 – 5:30 PM" },
-    { days: "Sunday & Public Holidays", time: "Closed" },
+    { days: "Monday – sunday", time: "8:00 AM – 5:30 PM" },
+    { days: "Friday", time: "2:30 – 5:30 PM" },
+    { days: "Public Holidays", time: "Closed" },
   ],
   stats: [
     { value: 10, suffix: "+", label: "Years of hands-on experience" },
