@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
 import SmartImage from "@/components/SmartImage";
-import Stats from "@/components/Stats";
 import CtaBand from "@/components/CtaBand";
 
 export const metadata: Metadata = {
@@ -84,14 +83,6 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="wrap">
-          <Reveal>
-            <Stats />
-          </Reveal>
         </div>
       </section>
 

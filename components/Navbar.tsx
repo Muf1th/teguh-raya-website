@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
@@ -19,6 +20,9 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // Logo shows automatically once /public/images/logo.png exists.
+  // Until then it hides itself so nothing looks broken.
+  const [hasLogo, setHasLogo] = useState(true);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -40,12 +44,25 @@ export default function Navbar() {
       }`}
     >
       <div className="wrap flex h-16 items-center justify-between sm:h-20">
-        <Link href="/" className="flex items-baseline gap-2" aria-label="Teguh Raya Workshop home">
-          <span className="font-display text-lg font-extrabold tracking-tight">
-            TEGUH<span className="text-accent">RAYA</span>
-          </span>
-          <span className="hidden text-[11px] font-semibold uppercase tracking-[0.2em] text-fog sm:block">
-            Workshop
+        <Link href="/" className="flex items-center gap-2.5" aria-label="Teguh Raya Workshop home">
+          {hasLogo && (
+            <Image
+              src="/images/logo.png"
+              alt=""
+              width={40}
+              height={40}
+              priority
+              className="h-9 w-9 rounded-lg object-contain sm:h-10 sm:w-10"
+              onError={() => setHasLogo(false)}
+            />
+          )}
+          <span className="flex items-baseline gap-2">
+            <span className="font-brand text-xl font-bold uppercase tracking-wide">
+              Teguh <span className="text-accent">Raya</span>
+            </span>
+            <span className="hidden text-[11px] font-semibold uppercase tracking-[0.2em] text-fog sm:block">
+              Workshop
+            </span>
           </span>
         </Link>
 

@@ -18,6 +18,7 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-manrope)", "system-ui", "sans-serif"],
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
+        brand: ["var(--font-brand)", "system-ui", "sans-serif"],
       },
       maxWidth: {
         wrap: "72rem",

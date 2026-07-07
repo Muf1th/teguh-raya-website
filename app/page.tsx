@@ -3,7 +3,6 @@ import { ArrowRight, BadgeCheck, Clock, HandCoins, Phone, Wrench } from "lucide-
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import SmartImage from "@/components/SmartImage";
-import Stats from "@/components/Stats";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import CtaBand from "@/components/CtaBand";
@@ -77,13 +76,6 @@ export default function HomePage() {
             </div>
           </Reveal>
         </div>
-      </section>
-
-      {/* STATS */}
-      <section className="wrap -mt-2 pt-10">
-        <Reveal>
-          <Stats />
-        </Reveal>
       </section>
 
       {/* SERVICES PREVIEW */}

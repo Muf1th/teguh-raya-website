@@ -8,8 +8,8 @@ export default function Footer() {
     <footer className="border-t border-steel bg-charcoal">
       <div className="wrap grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display text-lg font-extrabold tracking-tight">
-            TEGUH<span className="text-accent">RAYA</span>
+          <p className="font-brand text-xl font-bold uppercase tracking-wide">
+            Teguh <span className="text-accent">Raya</span>
           </p>
           <p className="mt-3 text-sm leading-relaxed text-fog">
             Professional car servicing and repair in Tutong, Brunei. Honest work,
