@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @apply bg-ink text-paper font-body antialiased;
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid #c8102e;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: #c8102e;
+  color: #f5f6f8;
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-wrap px-5 sm:px-8;
+  }
+  .section {
+    @apply py-20 sm:py-28;
+  }
+  /* Job-card eyebrow: the site's signature label style */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-[0.22em] text-accent;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-8 bg-accent;
+  }
+  .h-display {
+    @apply font-display font-extrabold tracking-tight text-paper;
+  }
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-6 py-3 font-display text-sm font-bold tracking-wide transition-colors duration-200;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-paper hover:bg-accent-hover;
+  }
+  .btn-ghost {
+    @apply btn border border-steel text-paper hover:border-fog;
+  }
+  .card {
+    @apply rounded-2xl border border-steel bg-charcoal;
+  }
+}
