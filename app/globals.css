@@ -22,13 +22,13 @@ body {
 
 /* Visible keyboard focus everywhere */
 :focus-visible {
-  outline: 2px solid #c8102e;
+  outline: 2px solid #eb2129;
   outline-offset: 3px;
   border-radius: 2px;
 }
 
 ::selection {
-  background: #c8102e;
+  background: #eb2129;
   color: #f5f6f8;
 }
 

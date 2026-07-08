@@ -11,8 +11,8 @@ const config: Config = {
         fog: "#A7ADB8",        // muted text
         paper: "#F5F6F8",      // primary text
         accent: {
-          DEFAULT: "#C8102E",  // deep red — the single brand accent
-          hover: "#E01E30",
+          DEFAULT: "#EB2129",  // brand red, sampled from the Teguh Raya logo
+          hover: "#F5333B",
         },
       },
       fontFamily: {
