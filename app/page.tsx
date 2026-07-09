@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Clock, HandCoins, Phone, Wrench } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import BlueprintHero from "@/components/BlueprintHero";
+import RepairExperience from "@/components/scenes";
 import SectionHeading from "@/components/SectionHeading";
 import SmartImage from "@/components/SmartImage";
 import ServiceCard from "@/components/ServiceCard";
@@ -40,40 +42,25 @@ const whyUs = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative flex min-h-[92svh] items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <SmartImage
-            src="/images/hero/hero-1.jpg"
-            alt="Technician working on an engine at Teguh Raya Workshop"
-            sizes="100vw"
-            priority
-          />
-          <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/30" />
-        </div>
+      <BlueprintHero />
 
-        <div className="wrap relative pb-16 pt-36 sm:pb-24">
-          <Reveal>
-            <p className="eyebrow">Kampung Serambangun · Tutong · Brunei</p>
-            <h1 className="h-display mt-5 max-w-3xl text-4xl leading-[1.05] sm:text-6xl">
-              Car repair you don&rsquo;t have to
-              <span className="text-accent"> second-guess.</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-fog sm:text-lg">
-              Servicing, engine work, brakes, suspension and fleet maintenance —
-              diagnosed honestly, quoted clearly, and fixed properly the first time.
-            </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/booking" className="btn-primary">
-                Book a Service <ArrowRight size={16} aria-hidden />
+      {/* FEATURED REPAIR EXPERIENCE */}
+      <section className="section">
+        <div className="wrap">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <SectionHeading
+              eyebrow="Watch, don't guess"
+              title="Experience the repair"
+              lead="Press play. This is what actually happens during an engine oil service — and every major repair on our Experience page is explained the same way."
+            />
+            <Reveal delay={0.1}>
+              <Link href="/experience" className="btn-ghost">
+                All 6 experiences <ArrowRight size={16} aria-hidden />
               </Link>
-              <a href={waLink("Hello Teguh Raya Workshop, I would like to book a service.")} target="_blank" rel="noopener noreferrer" className="btn-ghost">
-                WhatsApp Us
-              </a>
-              <a href={`tel:+${site.phoneRaw}`} className="btn-ghost">
-                <Phone size={16} aria-hidden /> Call Now
-              </a>
-            </div>
+            </Reveal>
+          </div>
+          <Reveal delay={0.1} className="mt-12">
+            <RepairExperience sceneKey="oil" />
           </Reveal>
         </div>
       </section>

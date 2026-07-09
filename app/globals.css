@@ -63,3 +63,19 @@ body {
     @apply rounded-2xl border border-steel bg-charcoal;
   }
 }
+
+/* ---- Blueprint experience layer ---- */
+@layer components {
+  .blueprint-grid {
+    background-image:
+      linear-gradient(rgba(167, 173, 184, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(167, 173, 184, 0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .mono-label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+}

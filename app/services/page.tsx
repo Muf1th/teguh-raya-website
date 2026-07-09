@@ -3,7 +3,10 @@ import { Clock } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
+import Link from "next/link";
+import { Play } from "lucide-react";
 import { serviceCategories, services } from "@/lib/services";
+import { experienceForService } from "@/lib/experiences";
 import { waLink } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -67,14 +70,21 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <a
-                        href={waLink(`Hello Teguh Raya Workshop, I would like to book: ${s.name}.`)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-primary mt-7"
-                      >
-                        Book {s.name}
-                      </a>
+                      <div className="mt-7 flex flex-wrap gap-3">
+                        <a
+                          href={waLink(`Hello Teguh Raya Workshop, I would like to book: ${s.name}.`)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-primary"
+                        >
+                          Book {s.name}
+                        </a>
+                        {experienceForService[s.slug] && (
+                          <Link href={`/experience/${experienceForService[s.slug]}`} className="btn-ghost">
+                            <Play size={15} aria-hidden /> Watch this repair
+                          </Link>
+                        )}
+                      </div>
                     </article>
                   </Reveal>
                 ))}
